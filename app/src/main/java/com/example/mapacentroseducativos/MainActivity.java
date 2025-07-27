@@ -110,9 +110,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private String getDirectionsUrl(LatLng origin, LatLng dest) {
         String str_origin = "origin=" + origin.latitude + "," + origin.longitude;
         String str_dest = "destination=" + dest.latitude + "," + dest.longitude;
-        String sensor = "sensor=false";
-        String key = "key=TU_API_KEY"; // Reemplaza con tu API Key
-        String parameters = str_origin + "&" + str_dest + "&" + sensor + "&" + key;
+        String mode = "mode=driving";
+        String key = "AIzaSyB8Zy8xs-KhJL-mCzr5M0yiINA7spZuhFo"; // Sustituye por tu clave
+
+        String parameters = str_origin + "&" + str_dest + "&" + mode + "&" + key;
         return "https://maps.googleapis.com/maps/api/directions/json?" + parameters;
     }
 
